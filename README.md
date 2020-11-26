@@ -84,7 +84,7 @@ QQ：**2645541423**
 
 ## 十一，程序截图
 
-![alt text](doc/程序截图1.png?raw=true)
+![alt text](doc/程序截图1.png)
 
 
 
