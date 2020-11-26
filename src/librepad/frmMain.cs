@@ -82,15 +82,7 @@ namespace librepad_demo
 
         private void 插入元素单选项ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            librepad_ui.frmSingleSelEdit fsse = new librepad_ui.frmSingleSelEdit();
-            if (fsse.ShowDialog() != DialogResult.OK)
-                return;
-
-            librepad.AreaData area = fsse.AreaData;
-            string sareaData = area.saveBase64();
-
-
-            m_pad.insertField(area.Value, "", sareaData);
+            m_pad.insertElementSingleSel();
         }
 
         private void 当前页号ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,15 +102,7 @@ namespace librepad_demo
 
         private void 插入元素自由文本ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            librepad_ui.frmSimpleTextEdit fste = new librepad_ui.frmSimpleTextEdit();
-            if (fste.ShowDialog() != DialogResult.OK)
-                return;
-
-            librepad.AreaData area = fste.AreaData;
-            string sareaData = area.saveBase64();
-
-
-            m_pad.insertField(area.Value, "", sareaData);
+            m_pad.insertElementText();
         }
 
         private void 赋值取值测试ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -176,6 +160,21 @@ namespace librepad_demo
         {
             m_pad.StructCanRemove = !chkEleDontDel.Checked;
 
+        }
+
+        private void 插入表格ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_pad.insertTable();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            m_pad.ctlDestroy();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            m_pad.insertElementMultiSel();
         }
     }
 

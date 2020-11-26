@@ -118,4 +118,17 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>dotfuscator $(SolutionDir)dfconfig.xml
+xcopy $(TargetDir)* $(ProjectDir)..\..\librepad发布\bin\x64\* /Y /F /EXCLUDE:$(SolutionDir)cpexclude.txt
+xcopy $(SolutionDir)测试文档\* $(ProjectDir)..\..\librepad发布\data\ /Y /F
+xcopy $(SolutionDir)Dotfuscated\cli_librepad.dll $(ProjectDir)..\..\librepad发布\bin\x64\cli_librepad.dll /Y /F
+
+xcopy $(ProjectDir)*.csproj $(ProjectDir)..\..\librepad发布\src\librepad\ /Y /F
+xcopy $(ProjectDir)*.cs $(ProjectDir)..\..\librepad发布\src\librepad\ /Y /F
+xcopy $(ProjectDir)*.config $(ProjectDir)..\..\librepad发布\src\librepad\ /Y /F
+xcopy $(ProjectDir)*.resx $(ProjectDir)..\..\librepad发布\src\librepad\ /Y /F
+xcopy $(ProjectDir)Properties\* $(ProjectDir)..\..\librepad发布\src\librepad\Properties\ /Y /F
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
