@@ -46,6 +46,9 @@ namespace librepad_demo
         private void frmMain_Load(object sender, EventArgs e)
         {
             CheckForIllegalCrossThreadCalls = false;
+
+            m_pad.OnShowMessage += Pad_OnShowMessage;
+
         }
 
         private void chkAreaInput_CheckedChanged(object sender, EventArgs e)
@@ -60,13 +63,16 @@ namespace librepad_demo
 
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(m_pad.isInit()==false)
+                m_pad.ctlInit(panelMain);
+
             m_pad.loadFile("");
         }
 
         private void 新建ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             m_pad.ctlInit(panelMain);
-            m_pad.OnShowMessage += Pad_OnShowMessage;
+            
         }
 
         private void 当前选中文本ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,6 +181,11 @@ namespace librepad_demo
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             m_pad.insertElementMultiSel();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            m_pad.insertElementDateTime();
         }
     }
 

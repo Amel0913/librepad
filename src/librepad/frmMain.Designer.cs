@@ -47,6 +47,7 @@
             this.结构化ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.插入字段自由文本ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.插入字段单选项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.使只读结构化区域可写ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.赋值取值测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,7 @@
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.splitter4 = new System.Windows.Forms.Splitter();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.tabRight.SuspendLayout();
             this.tabPageLog.SuspendLayout();
@@ -246,6 +247,7 @@
             this.插入字段自由文本ToolStripMenuItem,
             this.插入字段单选项ToolStripMenuItem,
             this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
             this.toolStripSeparator1,
             this.使只读结构化区域可写ToolStripMenuItem,
             this.赋值取值测试ToolStripMenuItem});
@@ -266,6 +268,13 @@
             this.插入字段单选项ToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.插入字段单选项ToolStripMenuItem.Text = "插入元素（单选项）";
             this.插入字段单选项ToolStripMenuItem.Click += new System.EventHandler(this.插入元素单选项ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 22);
+            this.toolStripMenuItem2.Text = "插入元素（多选项）";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripSeparator1
             // 
@@ -442,12 +451,12 @@
             this.panelMain.Size = new System.Drawing.Size(876, 631);
             this.panelMain.TabIndex = 8;
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItem3
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 22);
-            this.toolStripMenuItem2.Text = "插入元素（多选项）";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(196, 22);
+            this.toolStripMenuItem3.Text = "插入元素（日期时间）";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // frmMain
             // 
@@ -526,6 +535,7 @@
         private System.Windows.Forms.ToolStripMenuItem 插入表格ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }
 
